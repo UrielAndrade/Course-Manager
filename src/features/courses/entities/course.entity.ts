@@ -12,7 +12,7 @@ export class Course {
   @Column()
   description: string;
   
-  @Column()
+  @Column('json', {nullable: true})
   tags: string[];
 
 
