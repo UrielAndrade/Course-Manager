@@ -1,8 +1,6 @@
 import { IsString } from "class-validator";
 
 export class CreateCourseInput {
-  // @IsString()
-  // readonly id?: number;
 
   @IsString()
   readonly title: string;
