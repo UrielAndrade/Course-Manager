@@ -1,20 +1,19 @@
 import { ObjectType, Field, Int } from '@nestjs/graphql';
-
-@ObjectType()
+import { Entity, PrimaryGeneratedColumn, Column } from 'typeorm';
+@Entity(`courses`)
 export class Course {
-  @Field(() => Int, 
-  { description: 'Course ID' })
+
+  @PrimaryGeneratedColumn()
   id: number;
 
-  @Field(()=> String ,
-{description: 'Course Title' })
+  @Column()
   title: string;
 
-  @Field(() => String, 
-  { description: 'course description' })
+  @Column()
   description: string;
-
-  @Field(()=> [String], 
-  { description: 'Course Tags' })
+  
+  @Column('json', {nullable: true})
   tags: string[];
+
+
 }

@@ -27,9 +27,9 @@ export class CoursesResolver {
 
   @Mutation(() => Course)
   updateCourse(
-    @Args('updateCourseInput') updateCourseInput: UpdateCourseInput,
+    @Args('updateCourseInput')id:number, updateCourseInput: UpdateCourseInput,
   ) {
-    return this.coursesService.update(updateCourseInput);
+    return this.coursesService.update(id, updateCourseInput);
   }
 
   @Mutation(() => Course)
