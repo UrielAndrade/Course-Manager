@@ -7,7 +7,7 @@ export class Course {
   id: number;
 
   @Column()
-  name: string;
+  title: string;
 
   @Column()
   description: string;

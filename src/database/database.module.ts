@@ -1,5 +1,6 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { Course } from 'src/features/courses/entities/course.entity';
 import { DataSourceOptions } from 'typeorm';
 
 
@@ -11,7 +12,8 @@ export const dataSourceOptions: DataSourceOptions = {
   password: 'docker',
   database: 'coursemanager',
   synchronize: true,
-  entities: [''],
+  logging: true, 
+  entities: [__dirname + '/../**/*.entity{.ts,.js}'],
 }
 
 @Module({
