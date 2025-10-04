@@ -1,17 +1,15 @@
-version: '3.1'
+version: '3.8'
 
 services:
   db:
-    build: .
+    image: docker.io/postgres:13
     container_name: coursemanager-db
     restart: always
-    ports:
-      - 5432:5432
-    volumes:
-      - coursemanager-db-data:/var/lib/postgresql/data
+    network_mode: "host"
+    # ports:
+    #   - "5432:5432"
     environment:
-      - POSTGRES_PASSWORD=docker
-      - POSTGRES_DB=coursemanager
-
-volumes:
-  coursemanager-db-data:
+      POSTGRES_PASSWORD: docker
+      POSTGRES_DB: coursemanager
+    volumes:
+      - ./postgres-data:/var/lib/postgresql/data
