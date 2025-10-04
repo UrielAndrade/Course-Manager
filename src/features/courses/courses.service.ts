@@ -5,8 +5,7 @@ import { Course } from 'src/features/courses/entities/course.entity.js';
 
 @Injectable()
 export class CoursesService {
-  private courses: Course[] = [];
-  private counter = 1;
+
 
   createCourse(createCourseInput: CreateCourseInput): Course {
     const newCourse: Course = { 
