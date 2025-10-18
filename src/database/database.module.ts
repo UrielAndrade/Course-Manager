@@ -11,9 +11,10 @@ export const dataSourceOptions: DataSourceOptions = {
   username: 'postgres',
   password: 'docker',
   database: 'coursemanager',
-  synchronize: true,
+  synchronize: false,
   logging: true, 
-  entities: [__dirname + '/../**/*.entity{.ts,.js}'],
+  migrations: [__dirname + '/../migrations/*.migration'],
+  entities: [__dirname + '/../**/*.entity'],
 }
 
 @Module({

@@ -1,10 +1,11 @@
 
 
 up:
-	podman-compose down  # limpe primeiro
-  podman-compose up -d
-
+	@podman-compose down  
+	@podman-compose up -d
+	@bun run start:dev
 down:
-	podman-compose down
+	@podman-compose down
+
 
 
