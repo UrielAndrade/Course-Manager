@@ -1,6 +1,6 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { Course } from 'src/features/courses/entities/course.entity';
+import { Course } from 'src/entities/course.entity';
 import { DataSourceOptions } from 'typeorm';
 
 

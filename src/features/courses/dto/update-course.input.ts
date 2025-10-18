@@ -1,9 +1,7 @@
 import { IsString } from "class-validator";
-
+import { Tag } from "src/entities/tags.entity";
 export class UpdateCourseInput {
 
-  // @IsString()
-  // readonly id?: number;
   
   @IsString()
   readonly title?: string;
