@@ -1,7 +1,7 @@
 
 
 up:
-	podman-compose down  # limpe primeiro                     11m 54.294s
+	podman-compose down  # limpe primeiro
   podman-compose up -d
 
 down:
